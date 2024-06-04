@@ -27,8 +27,12 @@ void state_machine(Event_t event);
 State_t state = safe_locked;
 
 void setup();
-
-void loop();
+// Taster und Leds intitialisieren
+void loop()
+{
+  // if taster gedrückt dann soll Die State machine ablaufen mit den Jeweiligen Aktionen
+  state_machine(input1_accepted);
+}
 
 // Statemachine
 void state_machine(Event_t event)
