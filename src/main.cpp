@@ -20,8 +20,15 @@ typedef enum
   input_refused
 } Event_t;
 
+// Funktion definieren
 void state_machine(Event_t event);
+
+// globale Variable
 State_t state = safe_locked;
+
+void setup();
+
+void loop();
 
 // Statemachine
 void state_machine(Event_t event)
@@ -72,7 +79,3 @@ void state_machine(Event_t event)
     break;
   }
 }
-
-void setup();
-
-void loop();
